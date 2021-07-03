@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		button{
+			width: 50px;
+			height: 50px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	
+	
+	<form name = "calc" >
+		<input name="console" style="width: 320px;height: 50px; margin-bottom: 25px; font-size: 25px;"> <br>
+		<button type="button" onClick="document.calc.console.value += '0'">0</button>
+		<button type="button" onClick="document.calc.console.value += '1'">1</button>
+		<button type="button" onClick="document.calc.console.value += '2'">2</button>
+		<button type="button" onClick="document.calc.console.value += '3'">3</button>
+		<button type="button" onClick="document.calc.console.value += '4'">4</button>
+		<button type="button" onClick="document.calc.console.value += '+'">+</button><br>
+		<button type="button" onClick="document.calc.console.value += '5'">5</button>
+		<button type="button" onClick="document.calc.console.value += '6'">6</button>
+		<button type="button" onClick="document.calc.console.value += '7'">7</button>
+		<button type="button" onClick="document.calc.console.value += '8'">8</button>
+		<button type="button" onClick="document.calc.console.value += '9'">9</button>
+		<button type="button" onClick="document.calc.console.value = eval(document.calc.console.value)">=</button>
+		<button type="button" onClick="document.calc.console.value = ''">C</button>
+		
+	
+	</form>
+	
+</body>
+</html>

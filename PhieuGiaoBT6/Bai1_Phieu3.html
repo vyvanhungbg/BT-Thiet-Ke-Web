@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bai 2 Phieu 2</title>
+	<style>
+		input{
+			margin: 10px;
+		}
+	</style>
+	
+	<script>
+		function ptb2(){
+			
+			var box = document.forms["box"];
+			var a = Number(box["a"].value);
+			var b = Number(box["b"].value);
+			var c = Number(box["c"].value);
+			
+			var a2 = Number(box["a2"].value);
+			var b2 = Number(box["b2"].value);
+			var c2 = Number(box["c2"].value);
+			
+			
+			if(a ==a2 && b==b2 && c==c2){
+				document.getElementById("output").innerHTML = " Hệ Phương trình vô số nghiệm !";
+			}else if(a ==a2 && b==b2 && c!=c2 ){
+				
+				document.getElementById("output").innerHTML = " Hệ Phương trình vô nghiệm";
+			}else{
+				
+				var y = (c2*a - a2*c) / (b2*a - a2*b);
+				var x = (c - b*y) / a ;
+				document.getElementById("output").innerHTML = " Hệ Phương trình có 2 nghiêm  x " +x + ", y = " +y;
+			}
+		}
+	</script>
+</head>
+<body>
+	
+	<form name="box">
+		<h1>Tính phương trình bậc  2</h1>
+		<label for="a">a</label>
+		<input name="a" size="3"> 
+		<label for="b">b</label>
+		<input name="b" size="3">
+		<label for="c">c</label>
+		<input name="c" size="3"><br>
+		
+		<label for="a2">a'</label>
+		<input name="a2" size="3"> 
+		<label for="b2">b'</label>
+		<input name="b2" size="3">
+		<label for="c2">c'</label>
+		<input name="c2" size="3"><br>
+		<button type="button" onClick="ptb2()">Tính</button>
+		<p id="output"></p>
+	</form>
+	
+</body>
+</html>

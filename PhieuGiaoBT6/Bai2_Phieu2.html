@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<script>
+		function number(so)
+		{
+			document.cal.display.value += so;
+			
+		}
+	</script>
+</head>
+<body>
+	<form name="cal">
+		
+		<input name="display"> <br>
+		
+		<button type="button" onClick="number(1)" >1</button>
+		<button type="button" onClick="number(2)" >2</button>
+		<button type="button" onClick="number(3)" >3</button>
+		<button type="button" onClick="number(4)" >4</button>
+		<button type="button" onClick="number(5)" >5</button>
+		<button type="button" onClick="number('-')" >-</button> <br>
+		<button type="button" onClick="number(6)" >6</button>
+		<button type="button" onClick="number(7)" >7</button>
+		<button type="button" onClick="number(8)" >8</button>
+		<button type="button" onClick="number(9)" >9</button>
+		<button type="button" onClick="number(0)" >0</button>
+		<button type="reset"   >C</button>
+		<button type="button" onClick="document.cal.display.value =(eval(document.cal.display.value))" >=</button>
+	
+	</form>
+</body>
+</html>

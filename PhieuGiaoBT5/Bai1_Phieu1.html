@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<!--
+	<script>
+		function Day(min , max){
+			select = document.getElementById('selectElementId');
+			for(var i=min;i<=max;i++){
+				var opt = document.createElement('option');
+				opt.value = i;
+				opt.innerHTML = i;
+				select.appendChild(opt);
+			}
+		}
+	</script>
+-->
+</head>
+<body>
+	
+	<label for="ngay">Ngày tháng năm sinh :</label>
+	<select id="ngay" name ="ngay" o>
+		<script>
+			var min =1,max=31;
+			select = document.getElementById('ngay');
+			for(var i=min;i<=max;i++){
+				var opt = document.createElement('option');
+				opt.value = i;
+				opt.innerHTML = i;
+				select.appendChild(opt);
+			}
+		</script>
+	</select>
+	
+	<label for="thang">tháng</label>
+	<select id="thang" name ="thang" o>
+		<script>
+			var min =1,max=12;
+			select = document.getElementById('thang');
+			for(var i=min;i<=max;i++){
+				var opt = document.createElement('option');
+				opt.value = i;
+				opt.innerHTML = i;
+				select.appendChild(opt);
+			}
+		</script>
+	</select>
+	
+	<label for="nam">tháng</label>
+	<select id="nam" name ="nam" o>
+		<script>
+			var min =1900,max=2015;
+			select = document.getElementById('nam');
+			for(var i=min;i<=max;i++){
+				var opt = document.createElement('option');
+				opt.value = i;
+				opt.innerHTML = i;
+				select.appendChild(opt);
+			}
+		</script>
+	</select>
+	
+</body>
+</html>

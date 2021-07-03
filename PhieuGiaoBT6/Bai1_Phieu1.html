@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		table{
+			background-color: rgb(226, 150, 176);
+            margin: 100px ;
+		}
+	</style>
+	
+	<script>
+		function traCuu(){
+			var myForm = document.forms["myForm"];
+			var string1 = ["Canh",'Tân',"Nhâm", "Quí","Giáp","Ất","Bính","Đinh","Mậu","Kỷ"];
+			var string2 = ["Thân",'Dậu',"Tuất", "Hợi","Tý","Sửu","Dần","Mão","Thìn","Tỵ","Ngọ","Mùi"];
+			var tuoi = Number(myForm["tuoiDuongLich"].value);
+			
+			if(tuoi >0 && tuoi <10){
+				
+				document.getElementById("tuoiAL").value =string1[tuoi];
+			}else{
+				document.getElementById("tuoiAL").value = string1[parseInt(tuoi/10)] + " " + string2[parseInt(tuoi%10)];
+			}
+		}
+	</script>
+	
+</head>
+<body>
+	
+	
+	<form name="myForm" >
+		
+		<table border="1">
+		<tr>
+			<th colspan="2">Chương trình tra tuổi</th>
+			
+		</tr>
+		
+		<body>
+			<tr>
+				<td>Tuổi dương lịch</td>
+				<td><input name="tuoiDuongLich"></td>
+			</tr>
+			
+			<tr>
+				<td>Tuổi âm lịch</td>
+				<td><input id="tuoiAL" name="tuoiAmLich"></td>
+			</tr>
+			
+			<tr >
+				<td colspan="2" align="center">
+					<button align="center" name="Xoa" type="reset" >Xóa</button>
+					<button type="button" onClick="traCuu()">Tra cứu</button>
+				</td>
+			</tr>
+		
+		</body>
+	
+	</table>
+	
+	</form>
+	
+</body>
+</html>

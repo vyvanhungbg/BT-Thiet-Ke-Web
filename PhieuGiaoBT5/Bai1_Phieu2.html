@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function ptb2(a,b,c){
+			var delta = b*b - 4*a*c;
+			
+			if(delta <0 || a==0){
+				document.getElementById("output").innerHTML = "Phương trình vô nghiệm !";
+			}else if(delta ==0 ){
+				var kq = "Phương trình có nghiệm kép : " + -b /(2*a);
+				document.getElementById("output").innerHTML = kq;
+			}else{
+				var kq1 = (-b + Math.sqrt(delta))/ (2*a);
+				var kq2 = (-b - Math.sqrt(delta))/ (2*a);
+				
+				document.getElementById("output").innerHTML = "Phương trình có 2 nghiêm phân biệt x<sub>1</sub> " +kq1 + ", x<sub>2</sub> = " +kq2;
+			}
+		}
+	</script>
+</head>
+<body onload="ptb2(0,6,2)">
+	<p>ax<sup>2</sup>+bx+c = 0</p>
+	<p>a = 4, b = 6, c= 2 cho kết quả là :</p>
+	<p id="output" ></p>
+</body>
+</html>

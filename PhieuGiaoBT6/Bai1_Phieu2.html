@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bai 2 Phieu 2</title>
+	<style>
+		input{
+			margin: 10px;
+		}
+		
+	</style>
+	
+	<script>
+		function ptb2(){
+			
+			var box = document.forms["box"];
+			var a = Number(box["a"].value);
+			var b = Number(box["b"].value);
+			var c = Number(box["c"].value);
+			var delta = b*b - 4*a*c;
+			
+			if(delta <0 || a==0){
+				document.getElementById("output").innerHTML = "Phương trình vô nghiệm !";
+			}else if(delta ==0 ){
+				var kq = "Phương trình có nghiệm kép : " + -b /(2*a);
+				document.getElementById("output").innerHTML = kq;
+			}else{
+				var kq1 = (-b + Math.sqrt(delta))/ (2*a);
+				var kq2 = (-b - Math.sqrt(delta))/ (2*a);
+				
+				document.getElementById("output").innerHTML = "Phương trình có 2 nghiêm phân biệt x<sub>1</sub> " +kq1 + ", x<sub>2</sub> = " +kq2;
+			}
+		}
+	</script>
+</head>
+<body>
+	
+	<form name="box">
+		<h1>Tính phương trình bậc  2</h1>
+		<label for="a">a</label>
+		<input name="a" size="3"> <br>
+		<label for="b" >b</label>
+		<input name="b" size="3">
+		<br>
+		<label for="c" >c</label>
+		<input name="c" size="3"><br>
+		<button type="button" onClick="ptb2()">Tính</button>
+		<p id="output"></p>
+	</form>
+	
+</body>
+</html>

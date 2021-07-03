@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function check()
+		{
+			var box = document.forms["box"];
+			var x= box["ipt"].value;
+			if(x>=0 && x <=10){
+				return true;
+			}
+			document.getElementById("output").innerHTML = "Dữ liệu không đúng";
+				return false;
+		}
+	</script>
+</head>
+<body>
+	<form name="box" onSubmit="return check()">
+	<label for="ipt" >Hãy nhập vào hộp text (từ 1 đến 10)</label><br><br>
+		<input name="ipt" >
+		<input type="submit">
+		<p id="output"></p>
+	</form>
+</body>
+</html>
